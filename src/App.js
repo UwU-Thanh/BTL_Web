@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+// File: src/App.js
+import React from "react";
+import { ThemeProvider } from "./context/ThemeContext";
+import ToggleThemeButton from "./components/ToggleThemeButton";
+import WindowSizeDisplay from "./components/WindowSizeDisplay";
+import "./App.css"
+import "./index.css"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <div style={{ padding: 20 }}>
+        <h1>Theme Switcher & Custom Hook Demo</h1>
+        <ToggleThemeButton />
+        <WindowSizeDisplay />
+      </div>
+    </ThemeProvider>
   );
 }
 
