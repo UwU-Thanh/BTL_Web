@@ -1,4 +1,3 @@
-// File: src/App.js
 import React from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 import ToggleThemeButton from "./components/ToggleThemeButton";

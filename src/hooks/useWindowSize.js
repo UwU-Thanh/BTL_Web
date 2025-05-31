@@ -1,4 +1,3 @@
-// File: src/hooks/useWindowSize.js
 import { useState, useEffect } from "react";
 
 export default function useWindowSize() {
@@ -8,7 +7,6 @@ export default function useWindowSize() {
     const handleResize = () => {
       setSize({ width: window.innerWidth, height: window.innerHeight });
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
